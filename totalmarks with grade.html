@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Total marks with grade</title>
+    </head>
+    <body>
+        <h1>Total Marks with grade</h1>
+        <input type="text"name="Total Marks"id="marks">
+        <br>
+        <button onclick=myfunction()>Result</button>
+        <br>
+    </body>
+    
+    <script>
+        function myfunction()
+        {
+            var totalmarks=document.getElementById("marks").value;
+            var avg=totalmarks/5;
+            if(avg>85)
+            {
+                document.write( "Distinction");
+            }
+            else if(avg>60)
+            {
+                document.write("first Class")
+            }
+            else if(avg>50)
+            {
+                document.write("second class")
+            }
+            
+            else
+            {
+                document.write("Fail")
+            }
+            
+        }
+    </script>
+    
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Number is Prime or Not
+        </title>
+        </head>
+        <body>
+            <h1>Given Number is Prime or Not</h1>
+            <input type="text"Number="number"id="num">
+            <button onclick=myfunction()>Prime or Not</button>
+            <br>
+            <script>
+                let flag=0;
+                function myfunction()
+                {
+                    
+                    var num=document.getElementById("num").values;
+                   
+                        for(i=2 ; i < num/2 ; i++) {
+                        if(num%i == 0) {
+                        document.write("The number is not a prime");
+                        flag = 1;
+                        break;
+                    }
+                    }
+                    if(flag == 0) {
+                    document.write("The number is a Prime");
+                }
+                       
+
+                }
+            </script>
+        </body>
+    
+</html>

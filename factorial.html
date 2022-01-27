@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Factorial Number
+        </title>
+        <body>
+            <h1>Factorial of the Number</h1>
+            <input type="text"Number="number"id="num">
+            
+            <br><br>           
+            <button onclick="myfunction()">Factoroal of the Number</button>
+            <br>
+            <script>
+                function myfunction()
+                {
+                    var number=document.getElementById("num").value;
+                    if (number < 0) {
+                    document.write('Error! Factorial for negative number does not exist.');
+                    }
+
+
+                    else if (number === 0) {
+                    document.write("the factorial of " + number + "is",fact);
+                    }
+                    else {
+                    let fact = 1;
+                    for (i = 1; i <= number; i++) {
+                    fact *= i;
+                    }
+                    document.write("the factorial of" + number + "is",fact);}
+                }
+            </script>
+        </body>
+    </head>
+</html>

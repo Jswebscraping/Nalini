@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Student Result
+        </title>
+    </head>
+    <body>
+        <h1 style="color: brown;">Student Result</h1>
+        <p>Mark of the Student</p>
+        <input type="text" marks="number" id="num"><br>
+        <br>
+        <button onclick="myfunction()">Result</button>
+        <p id="mark">Pass or Fail</p>
+    </body>       
+        <script>
+            
+            function myfunction()
+            {
+                var marks=document.getElementById("num").value;
+                if(marks>49)
+                {
+                    document.write("pass")
+                }
+                else
+                {
+                    document.write("fail")
+                }
+            }
+        </script>
+    
+</html>
