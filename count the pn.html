@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title> Count the Prime number within given number</title>
+</head>
+<script>
+    function Prime()
+    {
+    var num1;
+    var num2;
+    num1 = Number(document.getElementById("Lower").value);
+    num2 = Number(document.getElementById("Higher").value);
+    var count = 0;
+
+    for(var i=num1;i<=num2;i++)
+    {
+        var res=0;
+        for(var temp=1;temp<=i;temp++)
+        {
+            if(i%temp==0)
+            {
+                res++;
+            }
+        }
+        if(res==2)
+        {
+            console.log(i);
+            count = count +1;
+            
+        }
+	}
+document.write(count); 
+}
+
+</script>
+<body>
+    <br>
+    <h2 style="color: darkgray; font-family: 'Courier New', Courier, monospace;"><i> Count the Prime number within given number</i></h2>
+    Enter Number 1 :<input type="text" name="n" id = "Lower"/>
+    Enter Number 2 :<input type="text" name="n" id = "Higher"/>
+    <button onClick="Prime()">submit</button>
+</body>
+</html>
