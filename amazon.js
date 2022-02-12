@@ -8,7 +8,6 @@ async function getPageData(url,page){
         const brand=await page.$eval('#poExpander > div.a-expander-content.a-expander-partial-collapse-content > div > table > tbody > tr.a-spacing-small.po-brand > td.a-span9 > span',span =>span.innerText);
         const MRP=await page.$eval('.a-offscreen',span =>span.innerText);
         const price=await page.$eval('.a-price-whole',span =>span.innerText);
-        //const image=await page.$eval('.s-image',image =>image.src);
         const rating=await page.$eval('.a-icon-alt',span=>span.innerText);
         const availability=await page.$eval('.a-size-medium ',span=>span.innerText);
         const abouttheitem=await page.$eval('.a-spacing-top-small>ul>li>span',span=>span.innerText);
@@ -24,8 +23,6 @@ async function getPageData(url,page){
         const page=await browser.newPage();
         await page.goto('https://www.amazon.in/s?k=moisturizer+for+face&crid=7VQPVOIHT7VZ&sprefix=mois%2Caps%2C552&ref=nb_sb_ss_ts-doa-p_1_4');
         const url=await page.evaluate(() =>{return Array.from(document.querySelectorAll('.rush-component>a')).map(image=>image.href)});
-        //console.log(url)
-        //await browser.close();
         return url;
     }
     (async function main(){
